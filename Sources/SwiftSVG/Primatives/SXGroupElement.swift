@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol SXGroupElement {
-    public var children : [SXElement] = []
+    public var children : [SXElement] {get set}
 }
