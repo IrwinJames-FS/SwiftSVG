@@ -9,5 +9,5 @@ import Foundation
 
 
 public protocol SXElement {
-    public var tagname: SXTagName {get}
+    var tagname: SXTagName {get}
 }

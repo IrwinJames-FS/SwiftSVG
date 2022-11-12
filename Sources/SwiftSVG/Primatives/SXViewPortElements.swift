@@ -9,5 +9,5 @@ import Foundation
 import CoreGraphics
 
 public protocol SXViewPortElement : SXGroupElement {
-    public var viewBox : CGRect {get set}
+    var viewBox : CGRect {get set}
 }
