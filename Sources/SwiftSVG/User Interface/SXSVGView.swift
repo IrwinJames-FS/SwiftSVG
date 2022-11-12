@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SXSVGView : View {
-    var body: some View {
+public struct SXSVGView : View {
+    public var body: some View {
         ZStack{
             Text("SVG VIEW")
         }
