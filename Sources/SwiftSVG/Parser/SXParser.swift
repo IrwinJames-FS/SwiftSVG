@@ -18,4 +18,20 @@ public class SXParser : NSObject, XMLParserDelegate {
         }
         print("Parsed")
     }
+    
+    func parserDidStartDocument(_ parser: XMLParser) {
+        print("Started Parsing Document")
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print("Finished Parsing Document")
+    }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        print("Started Parsing Element", elementName)
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        print("Finished Parsing Element", elementName)
+    }
 }
