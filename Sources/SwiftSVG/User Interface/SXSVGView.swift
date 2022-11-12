@@ -11,7 +11,9 @@ public struct SXSVGView : View {
     public var value: Int
     
     //This is just a test
-    public init(_ value: Int) {}
+    public init(_ value: Int) {
+        self.value = value
+    }
     public var body: some View {
         ZStack{
             Text("SVG VIEW")
