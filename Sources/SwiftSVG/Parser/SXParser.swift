@@ -10,7 +10,8 @@ import Foundation
 public class SXParser : NSObject, XMLParserDelegate {
     static public func parse(_ data: Data) {
         let p = XMLParser(data: data)
-        p.delegate = SXParser()
+        let pd = SXParser()
+        p.delegate = pd
         guard p.parse() else {
             print("Something went wrong")
             return
