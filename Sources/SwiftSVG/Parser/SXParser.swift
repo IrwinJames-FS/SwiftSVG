@@ -28,10 +28,18 @@ public class SXParser : NSObject, XMLParserDelegate {
     }
     
     public func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        guard let tn = SXTagName(rawValue: elementName) else {
+            print("Skipping unsupported tag")
+            return
+        }
         print("Started Parsing Element", elementName)
     }
     
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        guard let tn = SXTagName(rawValue: elementName) else {
+            print("Skipped unsupported tag")
+            return
+        }
         print("Finished Parsing Element", elementName)
     }
 }
