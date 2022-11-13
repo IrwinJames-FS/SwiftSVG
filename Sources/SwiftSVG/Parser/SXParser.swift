@@ -150,7 +150,7 @@ public class SXParser : NSObject, XMLParserDelegate {
     //MARK: - Element Parsers
     public func parseElement(_ tagname: SXTagName, attr: [String: String]) -> SXElement {
         switch tagname {
-        case .svg: parseSVG(attr: attr)
+        case .svg: return parseSVG(attr: attr)
         }
     }
     
