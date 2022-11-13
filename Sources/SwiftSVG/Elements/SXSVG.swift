@@ -18,7 +18,7 @@ public struct SXSVG : SXViewPortElement {
     
     //MARK: - SXElement Atrributes
     public var tagname: SXTagName = .svg
-    public var parent: SXGroupElement = nil
+    public var parent: SXGroupElement? = nil
     
     //MARK: - SXGroupElement Attributes
     public var children: [SXElement] = []
