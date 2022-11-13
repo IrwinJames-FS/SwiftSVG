@@ -16,7 +16,7 @@ public struct SXSVGView : View {
     }
     public var body: some View {
         ZStack{
-            ForEach(0..<element.children, id: \.self){i in
+            ForEach(0..<element.children.count, id: \.self){i in
                 SXDirectorView(element.children[i])
             }
         }
