@@ -152,6 +152,8 @@ public class SXParser : NSObject, XMLParserDelegate {
         switch tagname {
         case .svg:
             return parseSVG(attr: attr)
+        case .circle:
+            return parseCircle(attr: attr)
         }
     }
     
@@ -161,6 +163,13 @@ public class SXParser : NSObject, XMLParserDelegate {
         return SXSVG(viewBox) as SXElement
     }
     
+    public func parseCircle(attr: [String:String]) -> SXElement {
+        let cx = parseDouble(attr["cx"], 0.0)
+        let cy = parseDouble(attr["cy"], 0.0)
+        let r = parseDouble(attr["r"], 0.0)
+        
+        return SXCircle(cx: cx, cy: cy, r: r)
+    }
     /** This method will search and return all of the properties supported in the viewport*/
     public func parseViewPortAttr(_ attr: [String:String]) -> CGRect {
         return parseBox(attr["viewBox"], CGRect(x: 0, y: 0, width: 1024, height: 1024))

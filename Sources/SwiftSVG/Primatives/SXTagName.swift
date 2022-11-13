@@ -13,4 +13,5 @@ import Foundation
 
 public enum SXTagName : String {
     case svg = "svg"
+    case circle = "circle"
 }
