@@ -33,6 +33,9 @@ public class SXParser : NSObject, XMLParserDelegate {
             print("Skipping unsupported tag")
             return
         }
+        let n = parseInt("i")
+        let m = parseInt("1")
+        print(n, m)
         print("Started Parsing Element", elementName)
     }
     
