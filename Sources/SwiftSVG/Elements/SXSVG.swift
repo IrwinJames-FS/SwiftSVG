@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 /**
  svg is the root element.
@@ -22,6 +23,15 @@ public struct SXSVG : SXViewPortElement {
     public var children: [SXElement] = []
     
     //MARK: - SXViewPortElement Attributes
-    public var viewBox: CGRect = CGRect(x: 0, y: 0, width: 1024, height: 1024)
+    public var viewBox: CGRect
+    
+    //MARK: - Initializers
+    
+    public init(_ viewBox: CGRect) {
+        self.viewBox = viewBox
+    }
+    
+    convenience init(_ attr: [String: String]) {
+    }
     
 }

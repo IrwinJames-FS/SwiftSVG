@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 public class SXParser : NSObject, XMLParserDelegate {
     static public func parse(_ data: Data) {
