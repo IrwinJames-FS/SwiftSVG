@@ -150,14 +150,15 @@ public class SXParser : NSObject, XMLParserDelegate {
     //MARK: - Element Parsers
     public func parseElement(_ tagname: SXTagName, attr: [String: String]) -> SXElement {
         switch tagname {
-        case .svg: return parseSVG(attr: attr)
+        case .svg:
+            return parseSVG(attr: attr)
         }
     }
     
-    public func parseSVG(attr: [String:String]) -> SXSVG {
+    public func parseSVG(attr: [String:String]) -> SXElement {
         let viewBox = parseViewPortAttr(attr)
         
-        return SXSVG(viewBox)
+        return SXSVG(viewBox) as SXElement
     }
     
     /** This method will search and return all of the properties supported in the viewport*/
