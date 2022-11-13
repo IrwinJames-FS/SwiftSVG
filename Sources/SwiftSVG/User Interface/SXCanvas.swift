@@ -18,6 +18,5 @@ public struct SXCanvas : View {
         GeometryReader { geometry in
             SXSVGView(svg)
         }
-        .frame(minWidth: 500, minHeight: 500)
     }
 }
