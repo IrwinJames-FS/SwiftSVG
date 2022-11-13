@@ -15,7 +15,7 @@ extension SXParser {
     
     public func parseString<T>(_ str: String?, _ strategy: (String)->T?, _ d: T) -> T {
         guard let s = str else {return d}
-        return stategy(s) ?? d
+        return strategy(s) ?? d
     }
     public func parseInt(_ str: String?) -> Int? {
         return parseString(str, Int.init)
