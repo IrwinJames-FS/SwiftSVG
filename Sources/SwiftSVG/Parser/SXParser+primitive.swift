@@ -41,7 +41,7 @@ extension SXParser {
     }
     
     //MARK: - List parsers
-    public func parseList(_ str: String?) -> [String] {
+    public func parseList(_ str: String?) -> [String]? {
         return parseString(str, splitToList(_:))
     }
     
