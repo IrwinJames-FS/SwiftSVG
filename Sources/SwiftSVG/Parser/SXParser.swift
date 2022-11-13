@@ -38,7 +38,7 @@ public class SXParser : NSObject, XMLParserDelegate {
         
         var elem: SXElement = parseElement(tn, attr: attributeDict)
         if element != nil {
-            elem.parent = element
+            elem.parent = element as? SXGroupElement
         }
         element = elem
     }
