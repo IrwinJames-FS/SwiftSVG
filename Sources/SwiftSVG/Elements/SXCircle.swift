@@ -11,6 +11,7 @@ import CoreGraphics
 public struct SXCircle : SXElement {
     //MARK: - Element Properties
     public var tagname: SXTagName = .circle
+    public var parent: SXGroupElement? = nil
     
     //MARK: - Shape Properties
     public var cx: Double

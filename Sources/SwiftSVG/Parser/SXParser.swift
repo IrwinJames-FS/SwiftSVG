@@ -171,8 +171,17 @@ public class SXParser : NSObject, XMLParserDelegate {
         
         return SXCircle(cx: cx, cy: cy, r: r)
     }
+    
+    //MARK: - Protocol parsers
+    //these parsers should return tuples of the values required by their respective protocols
     /** This method will search and return all of the properties supported in the viewport*/
     public func parseViewPortAttr(_ attr: [String:String]) -> CGRect {
         return parseBox(attr["viewBox"], CGRect(x: 0, y: 0, width: 1024, height: 1024))
     }
+    
+    ///This method currently returns no value as the only supported attributes under this protocol are inferred from the context the the xml tagname. In the future this will need to return additional values
+    public func parseSXElement(_ attr: [String:String]) {}
+    
+    ///This method returns no values at this time as the only supported feature of group elements currently is they can hold children this is inferred the the layout of the file and not from the xml attributes. 
+    public func parseSXGroupElement(_ attr: [String:String]){}
 }
