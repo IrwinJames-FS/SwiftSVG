@@ -69,7 +69,7 @@ extension SXParser {
         return parseString(str, doubleList(_:))
     }
     
-    public func parseIntList(_ str: String?, _ d: [Double]) -> [Double] {
+    public func parseDoubleList(_ str: String?, _ d: [Double]) -> [Double] {
         return parseString(str, doubleList(_:)) ?? d
     }
     
@@ -101,7 +101,7 @@ extension SXParser {
     }
     
     public func toBox(_ str: String) -> CGRect?{
-        guard let list = doubleList(str), list.count == 4 else {return nil}
+        guard let list = parseDoubleList(str), list.count == 4 else {return nil}
         return CGRect(x: list[0], y: list[1], width: list[2], height: list[3])
     }
 }
