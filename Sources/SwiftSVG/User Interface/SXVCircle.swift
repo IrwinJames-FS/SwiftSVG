@@ -17,7 +17,8 @@ public struct SXVCircle : View {
     public var body: some View {
         Path{p in
             p.addEllipse(in: circle.rect)
-            p.fill(Color.red)
         }
+        .fill(Color.red)
+        
     }
 }
