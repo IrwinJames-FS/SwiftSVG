@@ -37,5 +37,7 @@ public struct SXSVG : SXViewPortElement {
         return viewBox.height/viewBox.width
     }
     
-    
+    public func scale(_ height: CGFloat) -> CGFloat {
+        return height / viewBox.height
+    }
 }
