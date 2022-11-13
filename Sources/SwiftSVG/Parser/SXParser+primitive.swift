@@ -85,7 +85,7 @@ extension SXParser {
     //MARK: - Mutators
     
     public func splitToList(_ str: String) -> [String] {
-        return str.replacingOccurrences(of: ",", with: " ").replacingOccurrences(of: "  ", with: " ").split(separator: " ")
+        return String(str.replacingOccurrences(of: ",", with: " ").replacingOccurrences(of: "  ", with: " ")).split(separator: " ").map{String($0)}
     }
     
     public func intList(_ str: String) -> [Int] {
