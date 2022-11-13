@@ -36,7 +36,7 @@ public class SXParser : NSObject, XMLParserDelegate {
             return
         }
         
-        let elem: SXElement = parseElement(tn, attr: attributeDict)
+        var elem: SXElement = parseElement(tn, attr: attributeDict)
         if element != nil {
             elem.parent = element
         }
