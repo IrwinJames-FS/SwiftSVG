@@ -18,6 +18,8 @@ public struct SXSVGView : View {
         ZStack{
             Text("SVG VIEW")
         }
+        .aspectRatio(element.aspectRatio, contentMode: .fit)
         .background(Color.red)
+        
     }
 }
