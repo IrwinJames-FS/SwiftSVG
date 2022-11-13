@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol SXGroupElement {
+public protocol SXGroupElement : SXElement {
     var children : [SXElement] {get set}
 }
