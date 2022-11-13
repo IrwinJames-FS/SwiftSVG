@@ -31,7 +31,5 @@ public struct SXSVG : SXViewPortElement {
         self.viewBox = viewBox
     }
     
-    convenience init(_ attr: [String: String]) {
-    }
     
 }
