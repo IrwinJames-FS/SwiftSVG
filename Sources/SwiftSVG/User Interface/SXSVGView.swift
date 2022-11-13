@@ -16,7 +16,9 @@ public struct SXSVGView : View {
     }
     public var body: some View {
         ZStack{
-            Text("SVG VIEW")
+            ForEach(0..<element.children, id: \.self){i in
+                SXDirectorView(element.children[i])
+            }
         }
         .aspectRatio(element.aspectRatio, contentMode: .fit)
         .background(Color.red)

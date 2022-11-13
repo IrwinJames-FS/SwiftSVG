@@ -39,16 +39,17 @@ public class SXParser : NSObject, XMLParserDelegate {
         var elem: SXElement = parseElement(tn, attr: attributeDict)
         if element != nil {
             elem.parent = element as? SXGroupElement
+            elem.parent!.children.append(elem)
         }
         element = elem
     }
     
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         guard let tn = SXTagName(rawValue: elementName) else {
-            print("Skipped unsupported tag")
             return
         }
-        print("Finished Parsing Element", elementName)
+        guard let p = element?.parent else {return}
+        element = p
     }
     
     //MARK: Generic parse strategy
