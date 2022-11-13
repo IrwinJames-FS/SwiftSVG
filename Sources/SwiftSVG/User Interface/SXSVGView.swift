@@ -8,11 +8,11 @@
 import SwiftUI
 
 public struct SXSVGView : View {
-    public var value: Int
+    public var element: SXSVG
     
     //This is just a test
-    public init(_ value: Int) {
-        self.value = value
+    public init(_ element: SXSVG) {
+        self.element = element
     }
     public var body: some View {
         ZStack{

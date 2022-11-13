@@ -8,14 +8,16 @@
 import SwiftUI
 
 public struct SXCanvas : View {
-    public var number: Int
+    public var svg : SXSVG
     
-    public init(_ number: Int) {
-        self.number = number
+    public init(_ svg: SXSVG) {
+        self.svg = svg
     }
+    
     public var body: some View {
-        ZStack{
-            SXSVGView(number)
+        GeometryReader { geometry in
+            SXSVGView(svg)
         }
+        .frame(minWidth: 500, minHeight: 500)
     }
 }
