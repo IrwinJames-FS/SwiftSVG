@@ -18,6 +18,7 @@ public struct SXSVG : SXViewPortElement {
     
     //MARK: - SXElement Atrributes
     public var tagname: SXTagName = .svg
+    public var parent: SXGroupElement = nil
     
     //MARK: - SXGroupElement Attributes
     public var children: [SXElement] = []
@@ -29,6 +30,11 @@ public struct SXSVG : SXViewPortElement {
     
     public init(_ viewBox: CGRect) {
         self.viewBox = viewBox
+    }
+    
+    //MARK: - Computed properties
+    public var aspectRatio: CGFloat {
+        return viewBox.height/viewBox.width
     }
     
     

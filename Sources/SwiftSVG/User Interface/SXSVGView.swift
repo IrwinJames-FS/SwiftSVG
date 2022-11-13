@@ -18,5 +18,6 @@ public struct SXSVGView : View {
         ZStack{
             Text("SVG VIEW")
         }
+        .background(Color.red)
     }
 }
